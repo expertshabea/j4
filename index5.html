@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+<h1>Write a program to initialize an array with city names. 
+    Copy 3 array elements from cities array to selectedCities 
+    array</h1>
+<h1>Selected Cities</h1>
+    <div id="output"></div>
+
+    <script>
+        // Initialize array with city names
+        let cities = ["New York", "London", "Paris", "Tokyo", "Sydney"];
+
+        // Initialize selectedCities array
+        let selectedCities = [];
+
+        // Copy three array elements from cities to selectedCities
+        selectedCities = cities.slice(1, 4); // copies elements at index 1, 2, and 3
+
+        // Output the selectedCities array
+        let outputDiv = document.getElementById('output');
+        outputDiv.innerHTML += "<h2>Selected Cities:</h2>";
+        outputDiv.innerHTML += "<p>" + selectedCities.join(", ") + "</p>";
+    </script>
+    
+    </body>
+</html>

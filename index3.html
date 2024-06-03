@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+<h1>Initialize an array with color names. Display the array
+    elements in your browser.
+    a. Ask the user what color he/she wants to add to the
+    beginning & add that color to the beginning of the array.
+    Display the updated array in your browser.
+    b. Ask the user what color he/she wants to add to the end 
+    & add that color to the end of the array. Display the 
+    updated array in your browser.
+    c. Add two more color to the beginning of the array. 
+    Display the updated array in your browser.
+    d. Delete the first color in the array. Display the updated
+    array in your browser.
+    e. Delete the last color in the array. Display the updated
+    array in your browser.
+    f. Ask the user at which index he/she wants to add a color 
+    & color name. Then add the color to desired 
+    position/index. . Display the updated array in your 
+    browser.
+    g. Ask the user at which index he/she wants to delete
+    color(s) & how many colors he/she wants to delete. Then
+    Arrays | JAVASCRIPT
+    Page 3 of 6
+    remove the same number of color(s) from user-defined
+    position/index. . Display the updated array in your
+    browser.</h1>
+
+<h1>Color Array Operations</h1>
+    <div id="output"></div>
+
+    <script>
+        // Initialize array with color names
+        let colors = ["red", "blue", "green"];
+
+        // Display array elements
+        function displayArray() {
+            document.getElementById('output').innerHTML += "<p>Colors: " + colors.join(", ") + "</p>";
+        }
+
+        // Ask user for color and add it to the beginning of the array
+        let colorToAddStart = prompt("Enter a color to add to the beginning:");
+        colors.unshift(colorToAddStart);
+        displayArray();
+
+        // Ask user for color and add it to the end of the array
+        let colorToAddEnd = prompt("Enter a color to add to the end:");
+        colors.push(colorToAddEnd);
+        displayArray();
+
+        // Add two more colors to the beginning of the array
+        colors.unshift("yellow", "orange");
+        displayArray();
+
+        // Delete the first color in the array
+        colors.shift();
+        displayArray();
+
+        // Delete the last color in the array
+        colors.pop();
+        displayArray();
+
+        // Ask user for index and color to add at that index
+        let indexToAdd = parseInt(prompt("Enter the index to add a color:"));
+        let colorToAddIndex = prompt("Enter the color to add at index " + indexToAdd + ":");
+        colors.splice(indexToAdd, 0, colorToAddIndex);
+        displayArray();
+
+        // Ask user for index and number of colors to delete
+        let indexToDelete = parseInt(prompt("Enter the index to delete color(s):"));
+        let numToDelete = parseInt(prompt("Enter the number of colors to delete:"));
+        colors.splice(indexToDelete, numToDelete);
+        displayArray();
+    </script>
+    </body>
+</html>

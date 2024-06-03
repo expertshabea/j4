@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Write a program to store student scores in an array & 
+        sort the array in ascending order using Array’s sort 
+        method.</h1>
+        <h1>Student Scores</h1>
+    <div id="output"></div>
+
+    <script>
+        // Array to store student scores
+        let studentScores = [75, 90, 82, 65, 88];
+
+        // Sort the array in ascending order
+        studentScores.sort(function(a, b) {
+            return a - b;
+        });
+
+        // Output the sorted array
+        let output Div = document.getElementById('output');
+        outputDiv.innerHTML += "<h2>Sorted Student Scores:</h2>";
+        outputDiv.innerHTML += "<p>" + studentScores.join(", ") + "</p>";
+    </script>
+    
+</body>
+</html>

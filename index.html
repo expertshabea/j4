@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js4</title>
+</head>
+<body>
+    <h1>Q1: Declare an empty array using JS literal notation to store
+        student names in future.</h1>
+        <script>
+        let studentNames = [];
+
+        </script>
+<h1>Declare an empty array using JS object notation to store
+    student names in future.</h1>
+        <script>
+        
+        let student Names = new Array();
+        
+        </script>
+<h1>Declare and initialize a strings array</h1>
+<style>let stringsArray = ["apple", "banana", "cherry"];</style>
+
+
+<h1> Declare and initialize a numbers array.</h1>
+<style>let numbersArray = [1, 2, 3, 4, 5];</style>
+
+
+<h1>Declare and initialize a boolean array.</h1>
+<style>let booleanArray = [true, false, true, false];</style>
+
+
+<h1>Declare and initialize a mixed array.</h1>
+    <style>let mixedArray = [1, "apple", true, null, {name: "John"}, [2, 3]];</style>
+
+
+    <h1>Declare and Initialize an array and store available 
+education qualifications in Pakistan (e.g. SSC, HSC, BCS, 
+BS, BCOM, MS, M. Phil., PhD). Show the listed 
+qualifications in your browser like:
+</h1>
+<h1>Available Education Qualifications in Pakistan</h1>
+    <ul id="qualificationsList"></ul>
+<style>// Declare and initialize the array with education qualifications
+let qualifications = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M. Phil.", "PhD"];
+
+// Get the <ul> element to display the qualifications
+let qualificationsList = document.getElementById('qualificationsList');
+
+// Loop through the array and create <li> elements for each qualification
+qualifications.forEach(function(qualification) {
+    let listItem = document.createElement('li');
+    listItem.textContent = qualification;
+    qualificationsList.appendChild(listItem);
+});</style>
+</body>
+</html>

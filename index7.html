@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<h1>3. Create a new array. Store values one by one in such a way
+    that you can access the values in the order in which they 
+    were stored. (FIFO-First In First Out)
+    </h1>
+
+<h1>FIFO Array</h1>
+    <div id="output"></div>
+
+    <script>
+        // Create a new empty array
+        let fifoArray = [];
+
+        // Function to add a value to the end of the array
+        function enqueue(value) {
+            fifoArray.push(value);
+            updateOutput();
+        }
+
+        // Function to remove and return the first value from the array
+        function dequeue() {
+            let removedValue = fifoArray.shift();
+            updateOutput();
+            return removedValue;
+        }
+
+        // Function to update the output on the webpage
+        function updateOutput() {
+            let outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = "<h2>Current FIFO Array:</h2>";
+            outputDiv.innerHTML += "<p>" + fifoArray.join(", ") + "</p>";
+        }
+
+        // Test the FIFO operations
+        enqueue("First");
+        enqueue("Second");
+        enqueue("Third");
+        dequeue();
+        enqueue("Fourth");
+        dequeue();
+    </script>
+    </body>
+</html>

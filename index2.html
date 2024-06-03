@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Qualifications in Pakistan</title>
+</head>
+<body>
+    <h1>Available Education Qualifications in Pakistan</h1>
+    <ul id="qualificationsList"></ul>
+
+    <script>
+        // Declare and initialize the array with education qualifications
+        let qualifications = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M. Phil.", "PhD"];
+
+        // Get the <ul> element to display the qualifications
+        let qualificationsList = document.getElementById('qualificationsList');
+
+        // Loop through the array and create <li> elements for each qualification
+        qualifications.forEach(function(qualification) {
+            let listItem = document.createElement('li');
+            listItem.textContent = qualification;
+            qualificationsList.appendChild(listItem);
+        });
+    </script>
+    <h1>Write a program to store 3 student names in an array.Take
+        another array to store score of these three students. 
+        Assume that total marks are 500 for each student, display 
+        the scores & percentages of students</h1>
+
+<h1>Student Scores</h1>
+<div id="output"></div>
+
+<script>
+    // Arrays to store student names and scores
+    let studentNames = ["Alice", "Bob", "Charlie"];
+    let scores = [380, 420, 450]; // Scores out of 500
+
+    // Function to calculate percentages
+    function calculatePercentage(score) {
+        return (score / 500) * 100;
+    }
+
+    // Output the scores and percentages
+    let outputDiv = document.getElementById('output');
+    outputDiv.innerHTML += "<h2>Scores and Percentages:</h2>";
+    for (let i = 0; i < studentNames.length; i++) {
+        let percentage = calculatePercentage(scores[i]);
+        outputDiv.innerHTML += "<p>" + studentNames[i] + ": " + scores[i] + " out of 500, " + percentage.toFixed(2) + "%</p>";
+    }
+</script>
+
+</body>
+</html>
